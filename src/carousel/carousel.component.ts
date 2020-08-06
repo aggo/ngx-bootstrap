@@ -70,9 +70,6 @@ export class CarouselComponent implements AfterViewInit, OnDestroy {
   /** Index of currently displayed slide(started for 0) */
   @Input()
   set activeSlide(index: number) {
-    if (this.multilist) {
-      return;
-    }
     if (this._slides.length && index !== this._currentActiveSlide) {
       this._select(index);
     }
